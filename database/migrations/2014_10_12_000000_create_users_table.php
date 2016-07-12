@@ -31,7 +31,7 @@ class CreateUsersTable extends Migration
         Schema::table('users', function (Blueprint $field) {
             $field  ->foreign('roles_id')
                     ->references('id')
-                    ->on('users')
+                    ->on('roles')
                     ->onDelete('cascade')
                     ->onUpdate('cascade');
         });
