@@ -10,6 +10,12 @@ use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
+
+	public function __construct()
+	{
+		$this->middleware('guest');
+	}
+
     public function getLogin()
     {
     	return view('login.formLogin');

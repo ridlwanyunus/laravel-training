@@ -16,6 +16,11 @@ use DB;
 class RegisterController extends Controller
 {
 
+	public function __construct()
+	{
+		$this->middleware('guest');
+	}
+
     public function getRegister()
     {
     	return view('register.formRegister');
