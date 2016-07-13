@@ -19,7 +19,15 @@ Route::post('/postRegister', 'RegisterController@postRegister');
 Route::get('/login', 'LoginController@getLogin');
 Route::post('/postLogin', 'LoginController@postLogin');
 
+Route::get('pageAksesKhusus', function(){
+	return view('pageAksesKhusus');
+});
+
+Route::get('/delete', 'AdminController@delete');
+Route::get('/update', 'AdminController@update');
+
 Route::get('/logout', function(){
 	Auth::logout();
 	return "Sukses Logout";
 });
+

@@ -26,6 +26,24 @@ class User extends Authenticatable
 
     public function role()
     {
-        return $this->belongsTo(Role::class);
+        return $this->belongsTo(Role::class, 'roles_id');
+    }
+
+    public function hasRule($namaRule)
+    {
+        //dd($this->role->namaRule);
+        if($this->role->namaRule == $namaRule)
+        {
+            return true;
+        }
+
+
     }
 }
+
+
+
+
+
+
+

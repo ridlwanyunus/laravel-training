@@ -42,5 +42,7 @@ class RegisterController extends Controller
 
     	//dd($user);
     	$user->save();
+
+    	return redirect('login');
     }
 }
