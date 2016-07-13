@@ -41,11 +41,13 @@
                 <?php
                 if(DB::connection()->getDatabaseName())
                 {
-                 echo "<div class='title'>Connected sucessfully to database ".
-                    DB::connection()->getDatabaseName()."</br></div>";
+                    $user = Auth::user();
+                    echo "<div class='title'>Welcome to your dashboard, " . $user->username . "</br></div>";
+                 //echo "<div class='title'>Connected sucessfully to database ".
+                   // DB::connection()->getDatabaseName()."</br></div>";
+                
                 }
-                $user = Auth::user();
-                echo $user->email;
+
                 ?>
             </div>
         </div>
